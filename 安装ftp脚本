@@ -1,0 +1,10 @@
+#!/bin/bash
+yum install -y vsftpd &> /dev/null
+#cp /etc/vsftpd/vsftpd.conf{,.bak}
+sed -i 's/^#anon_/anon_/'  /etc/vsftpd/vsftpd.conf
+chmod 777 /var/ftp/pub
+systemctl restart vsftpd
+systemctl enable vsftpd
+systemctl stop firewalld
+setenforce 0
+
