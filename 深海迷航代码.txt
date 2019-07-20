@@ -1,0 +1,111 @@
+全秘籍代码汇总及控制台用法介绍
+　　代码使用方法 按F3，把左上面的两个都去掉，然后按f3退出，按”~ “出现输入框，按照"item/spawn XXXX ZZ"格式输入，记住XXXX是代码 ZZ是数量 前面的英文，item是物品进入背包，spawn是产生，都要小写，指令、代码、数量间要有空格。
+　　界面、功能性代码
+　　1、ITEM [NAME] [NUMBER]
+　　免费得到得到物品。NAME为物品名称，NUMBER为物品数量
+　　范例：得到小刀3把：ITEM KNIFE 3
+　　2、SPAWN [NAME] [NUMBER]
+　　生成1个载具或者生物。
+　　范例：生成海蛾号1艘：SPAWN SEAMOTH 1
+　　生成利维坦15只：SPAWN ReaperLeviathan 15
+　　3、SUB CYCLOPS
+	sub cyclops
+　　在玩家面前生成1艘潜艇
+　　4、NODAMAGE
+	nodamage
+　　玩家无敌，不会被敌对生物攻击受伤，载具不会受损伤，但是玩家同时不能伤害其它生物。
+　　5、NOCOST
+nocost
+　　各种合成不需要任何原材料，免费点!
+　　6、OXYGEN
+oxygen
+　　无限氧气。
+　　7、RADIATION
+　　消除辐射。
+　　8、NITROGEN(氮气)
+　　在水下能呆更长时间，但是如果你快速浮出水面会有“减压病”的症状。(未测试)
+　　9、BIOME [NAME]
+　　1.如果只输入BIOME，你会看到你所处BIOME的名称，与MC的F3类似。
+　　2.如果BIOME后加NAME，则你被传送到指定BIOME。
+　　3.可用的BIOME名称：safe, kelp, grassy, mushroom, koosh, jellyshroom, sparsereef, grandreef, dunes, mountains, deepgrand, bloodkelp, underislands, smokers, inactivelavart, islands, tree.
+　　(不知道的看看上面的地形介绍)
+　　10、WARP [X] [Y] [Z]
+　　把玩家传送到指定坐标。范例：WARP 1 1 1
+　　11、BATCH [X] [Y] [Z]
+　　与WARP类似，我也不清楚。范例：BATCH 1 1 1
+　　12、WARPME
+　　把玩家传送到他上一次所在的载具里。
+
+　　13、GOTO GENROOM/AURORA
+　　快速抵达极光号发动机房。
+　　14、GOTO JELLYSHROOM
+　　快速抵达水母蘑菇山洞。
+　　15、SPAWN
+　　把玩家随机传送附近的地方。如果你不小心用WARP指令卡在地里，就输这条指令。
+　　16、KILL
+　　把自己传送到逃生舱，但是物品不会掉。
+　　17、TAKEDAMAGE [NUMBER]
+　　使玩家受到一定点数的伤害，如果不填数字，则系统随机取一个值。
+　　18、DAY
+　　使时间变为白天。这一指令的后果就是不能生成“补给箱子”
+　　19、NIGHT
+night
+
+　　使时间变为黑夜。
+　　20、DAYNIGHTSPEED [number]
+　　使得昼夜循环的时间发生改变。例如：DAYNIGHTSPEED 10，则昼夜交替速度为默认(默认=1)的10倍。
+　　DAYNIGHTSPEED 0.01，则昼夜交替速度为默认的0.01倍。
+　　20、SPEED [NUMBER]
+　　使得玩家的速度发生改变。例如 SPEED 20，则玩家速度变为20倍。
+　　21、SPAWNLOOT
+　　给玩家一些随机的补给与工具。
+　　22、MADLOOT
+　　给玩家大量补给与工具。
+　　23、BUBBLES
+　　在玩家周围生成几个气泡(提供O2)
+　　24、DIG [NUMBER]
+　　把以玩家为中心，数值为直径的圆球内的任何东西全部清除，最大值为100。(挖地神器，不过这会使你的内存激增，内存不够要崩溃)
+
+　　25、EXPLODESHIP
+　　使得极光号暗物质反应堆立刻发生爆炸，但是不会有爆炸声音。
+　　26、RESTORESHIP
+　　使得极光号恢复没有炸之前的状态。
+　　27、FREECAM
+　　使得游戏第一人称镜头(原本镜头是玩家的眼睛)脱离玩家，并且可以任意移动自由查看地形(可穿地)。
+　　再次输入则使镜头回到玩家身上。按SHIFT可控制镜头加速，按住SHIFT再按1~5键控制速度。
+　　28、NOSHADOW
+　　移除阴影效果。重启游戏后无效。
+　　29、NOBLOOM
+　　移除???(请人测试一下)。重启游戏后无效。
+　　30、DEBUGSOUND
+　　去除音效。
+　　31、FARPLANE [NUMBER]
+　　改变你的最远可视距离。默认为1000。
+　　32、FOV [NUMBER]
+　　改变玩家镜头焦距，可取值5~500000。
+　　33、ENTRESET
+　　重置游戏(除了地形)
+　　34、GAMERESET
+　　重置游戏，读取上一次存档时的玩家位置，物品信息，地形载具等信息。
+　　35、COMMANDS
+　　显示完整的指令列表，但是由于屏幕大小原因，有些指令的显示超出了屏幕。
+　　36、FREEDOM/SURVIVAL/HARDCORE
+　　改变游戏模式。
+　　37、SIZEREF
+　　生成1个假潜水员，用于大小比对。
+　　38、BLUEPRINT [NAME]
+blueprint transfusfuserblueprint
+　　给玩家一个图纸。范例BLUEPRINT TRANSFUSERBLUEPRINT解锁DNA提取枪图纸。
+　　39、FORGET [NAME]
+　　把已经获得的图纸删除。(这不是作死吗?)
+　　40、noblueprints
+noblueprints
+unlockall	
+　　解锁所有图纸。
+　　41、FASTBUILD
+fastbuld
+　　使用建造器时建造能够立刻完成。
+　　42、PRINTBIOME
+printblome
+　　显示你所在地形的位置和一个小地图。
+spawn Hoverbike 雪地摩
